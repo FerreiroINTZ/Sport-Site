@@ -8,3 +8,17 @@ body{
     background: #212121;
     color: white;
 }
+
+#root{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+#section-pages{
+    background: #737373;
+    width: 1080px;
+    height: 460px;
+    border-radius: 3px;
+}
