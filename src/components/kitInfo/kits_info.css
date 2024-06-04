@@ -1,0 +1,35 @@
+#main_kits-infos{
+    height: 100%;
+    margin: 0px 0px 0px calc((960px * 4) - (40px * 4) - 120px * 3);
+    padding: 40px;
+    display: flex;
+    background: rgba(255, 0, 0, .3);
+    width: calc(960px * 6);
+
+    p{
+        background: green;
+    }
+}
+
+.kits_info{
+    background: white;
+    /* width: 960px;
+    height: 380px; */
+    width: 960px;
+    border-radius: 10px;
+    color: black;
+    padding: 40px;
+    margin: 0px 60px;
+
+    /* .kit-info{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        
+        .infos{
+            list-style: none;
+            background: #E8E8E8;
+        } */
+    }
