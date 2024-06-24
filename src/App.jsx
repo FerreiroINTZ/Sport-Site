@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Header from "./components/header/header"
 import KitsList from "./components/kits_list/kits_list.jsx"
 import NewKit from "./components/addkit/new_kit.jsx"
@@ -17,44 +17,6 @@ function App() {
   
   
   const [kits, setkits] = useState([
-    {
-      name: "primeiro kit",
-      id: Math.random(),
-      kite: [
-              {
-                img: (Bone),
-                nome: "nada",
-                link: "vazio",
-                marca: "nenhuma",
-                preco: "R$0,00",
-                comprado: false
-              },
-              {
-                img: (Camisa),
-                nome: "nada",
-                link: "vazio",
-                marca: "nenhuma",
-                preco: "R$0,00",
-                comprado: false
-              },
-              {
-                img: (Calsa),
-                nome: "nada",
-                link: "vazio",
-                marca: "nenhuma",
-                preco: "R$0,00",
-                comprado: false
-              },
-              {
-                img: (Tenis),
-                nome: "nada",
-                link: "vazio",
-                marca: "nenhuma",
-                preco: "R$0,00",
-                comprado: false
-              }
-            ]
-    },
     {
       name: "primeiro kit",
       id: Math.random(),
@@ -121,9 +83,18 @@ function App() {
     comprado: false
   }])
 
+  const setKit = (kit) =>{
+    kit.forEach(element => {
+      setCurrent_kit(x => {return[...x, kit, {state: false}]})
+    });
+  }
+
+  useEffect(() =>{
+    console.log(current_kit)
+  }, [current_kit])
+
   return (
     <>
-        <button onClick={x => console.log(kits)}>Show</button>
         <Header />
         <section id="section-pages">
 
@@ -151,7 +122,8 @@ function App() {
 
           <KitInfo 
             kit={current_kit}
-            state={pageState}
+            state={pageState[2].page3}
+            setPageState={setPageState}
           />
 
         </section>

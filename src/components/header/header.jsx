@@ -14,7 +14,7 @@ function header() {
             </li>
             <li>
               <img src={git_hub} alt="" />
-              <a href="https://www.google.com">Git Hub</a>
+              <a href="https://github.com/FerreiroINTZ">Git Hub</a>
             </li>
             <li>
               <img src={linkedin} alt="" />

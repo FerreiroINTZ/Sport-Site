@@ -39,6 +39,14 @@ header{
             cursor: pointer;
             font-size: 24px;
             transition: .5s;
+            
+            a{
+                text-decoration: none;
+                color: black;
+                font-family: "Quantico", sans-serif;
+                font-weight: 400;
+                font-style: italic;
+            }
 
             img{
                 width: 40px;
